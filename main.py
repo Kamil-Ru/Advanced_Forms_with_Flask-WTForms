@@ -3,11 +3,14 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, validators
 import email_validator
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
+from flask_bootstrap import Bootstrap
 
 email = "admin@email.com"
 password = "12345678"
 
 app = Flask(__name__)
+Bootstrap(app)
+
 app.secret_key = "scooter159"
 validator = DataRequired()
 
